@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Chuck Jokes-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="ChuckJokesMain" title="Chuck Jokes" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ChuckJokes">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="aM0-bj-gfK">
+                            <items>
+                                <label alignment="left" id="hNu-Gc-2Sh"/>
+                                <separator alignment="left" id="ahK-wJ-RYL"/>
+                                <label alignment="left" numberOfLines="0" id="84P-Hc-hS8"/>
+                                <button width="1" alignment="left" title="Next" id="ApO-9Z-gOw">
+                                    <connections>
+                                        <action selector="nextBtnClicked" destination="AgC-eL-Hgc" id="fVU-us-PKY"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="contentLabel" destination="84P-Hc-hS8" id="dPY-kx-c5X"/>
+                        <outlet property="titleLabel" destination="hNu-Gc-2Sh" id="gTC-HN-iau"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--ChuckJokesGlance-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController identifier="ChuckJokesGlance" spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="ChuckJokes">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" id="2Wz-Ed-2eg"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label alignment="left" numberOfLines="0" id="esv-Me-8GB"/>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="esv-Me-8GB" id="wxD-OI-gGd"/>
+                        <outlet property="titleLabel" destination="2Wz-Ed-2eg" id="l9u-OU-1gv"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+    </scenes>
+</document>
